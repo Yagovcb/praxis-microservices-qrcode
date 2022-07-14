@@ -1,0 +1,31 @@
+server:
+  host: localhost
+  port: 8051
+
+spring:
+  application:
+    name: praxis-microservices-qrcode
+
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.client: INFO
+    org.springframework.security.oauth2: INFO
+    com.praxis.qrcode.infrastructure.client: DEBUG
+    com.praxis.qrcode.config.jwt: TRACE
+
+#S3
+s3:
+  access-key-id: AKIAZQN7FOEBHG5SFVO5
+  secret-key-id: 49FfLSKord4rDdjMR3Db32u0XhIrSYy2yRTlw9iT
+  region: sa-east-1
+  bucket: dev-bucket-yagovcb
+
+#INFORMATION
+info:
+  app:
+    description: Projeto PRAXIS PIX QRCode
+    name: ${spring.application.name}
+    version: 1.0.0
