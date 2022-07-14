@@ -1,6 +1,5 @@
 package com.praxis.qrcode.application.service;
 
-import com.google.zxing.WriterException;
 import com.praxis.qrcode.utils.ImageUtils;
 import com.praxis.qrcode.utils.TempFileUtils;
 import lombok.RequiredArgsConstructor;
@@ -19,6 +18,7 @@ import java.util.Objects;
 public class QrCodeImageGeneratorService {
 
     private static final int IMAGE_SIZE = 300;
+
     private final S3Service s3Service;
 
     @SneakyThrows(value = IOException.class)
