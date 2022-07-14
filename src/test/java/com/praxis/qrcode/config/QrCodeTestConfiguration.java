@@ -24,7 +24,7 @@ public class QrCodeTestConfiguration {
         return new QrCodeEstaticoService(staticQrCodeCreatorService, qrCodeImageGeneratorService);
     }
 
-    @Bean
+    @Bean("s3properties")
     public S3Properties s3Properties(){
         return new S3Properties();
     }

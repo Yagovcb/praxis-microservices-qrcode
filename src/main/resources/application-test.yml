@@ -1,0 +1,6 @@
+#S3
+s3:
+  access-key-id: AKIAZQN7FOEBHG5SFVO5
+  secret-key-id: 49FfLSKord4rDdjMR3Db32u0XhIrSYy2yRTlw9iT
+  region: sa-east-1
+  bucket: dev-bucket-yagovcb

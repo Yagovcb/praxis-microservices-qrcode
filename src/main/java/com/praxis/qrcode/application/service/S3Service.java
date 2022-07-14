@@ -11,6 +11,7 @@ import com.praxis.qrcode.config.properties.S3Properties;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tika.Tika;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -28,6 +29,7 @@ public class S3Service {
 
     private final AmazonS3 amazonS3;
 
+    @Qualifier("s3properties")
     private final S3Properties s3Properties;
 
     private final static long tenYearsInSeconds = 10 * 365 * 24 * 60 * 60L;
