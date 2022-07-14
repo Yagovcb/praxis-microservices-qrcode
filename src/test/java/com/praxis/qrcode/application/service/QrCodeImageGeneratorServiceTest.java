@@ -1,2 +1,402 @@
-package com.praxis.qrcode.application.service;public class QrCodeImageGeneratorServiceTest {
+package com.praxis.qrcode.application.service;
+
+import com.praxis.qrcode.domain.mock.StaticQrCodeRequestMock;
+import com.praxis.qrcode.infrastructure.request.StaticQrCodeRequest;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@SpringBootTest
+@ExtendWith(SpringExtension.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ContextConfiguration(classes = {QrCodeImageGeneratorService.class})
+@DisplayName("QrCodeImageGeneratorService - Classe de teste unitario")
+class QrCodeImageGeneratorServiceTest {
+
+    @Autowired
+    private QrCodeImageGeneratorService qrCodeImageGeneratorService;
+
+    /**
+     * Method under test: {@link QrCodeImageGeneratorService#generate(String)}
+     */
+    @Test
+    @Disabled("TODO: Complete this test")
+    void testGenerate() {
+        // TODO: Complete this test.
+        //   Reason: R020 Temporary files were created but not deleted.
+        //   The method under test created the following temporary files without deleting
+        //   them:
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036245_132.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036253_1.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036256_614.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036258_741.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036260_463.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036262_580.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036264_514.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036266_590.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036268_290.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036269_115.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036271_594.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036273_40.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036275_464.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036276_272.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036278_753.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036279_461.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036281_102.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036282_967.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036284_743.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036285_776.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036286_892.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036288_564.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036289_52.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036290_615.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036292_718.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036293_293.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036295_142.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036296_450.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036298_597.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036300_826.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036301_745.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036303_778.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036305_918.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036309_759.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036310_257.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036312_82.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036313_89.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036315_701.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036317_262.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036319_867.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036320_34.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036323_647.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036326_489.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036327_273.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036328_545.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036329_372.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036331_333.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036332_229.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036333_145.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036335_383.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036336_574.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036337_540.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036339_535.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036340_678.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036341_3.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036343_114.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036344_877.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036345_569.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036347_878.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036348_866.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036349_508.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036350_161.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036355_850.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036357_53.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036359_540.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036361_524.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036363_147.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036365_848.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036367_638.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036369_402.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036370_53.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036372_220.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036375_356.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036376_179.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036377_363.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036378_504.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036380_15.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036382_887.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036383_695.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036384_6.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036385_579.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036387_150.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036388_551.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036390_641.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036392_628.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036394_672.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036397_398.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036400_48.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036401_95.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036403_647.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036404_629.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036405_34.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036407_271.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036408_749.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036409_700.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036410_489.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036412_209.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036414_149.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036415_990.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036416_386.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036417_402.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036418_97.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036420_434.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036421_205.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036423_949.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036424_821.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036425_956.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036427_129.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036428_635.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036430_336.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036431_685.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036432_812.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036435_752.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036439_210.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036443_945.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036445_676.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036448_819.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036450_998.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036452_402.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036455_529.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036457_199.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036459_356.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036460_552.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036462_31.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036463_144.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036464_360.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036465_988.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036467_561.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036468_590.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036469_400.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036470_311.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036471_252.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036473_260.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036474_489.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036475_652.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036476_30.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036477_429.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036479_387.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036482_778.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036485_50.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036492_490.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036494_141.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036495_580.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036497_520.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036499_835.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036500_114.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036502_944.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036504_644.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036511_286.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036518_868.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036519_674.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036521_755.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036522_329.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036524_876.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036526_451.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036527_903.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036528_617.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036530_816.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036531_470.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036532_64.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036534_765.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036535_67.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036536_437.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036537_880.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036539_481.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036540_309.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\202207141036541_723.png
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-10402695128227081545184266483724883085.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-1057340187289906788005688672184560821.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-10875866530862023821539354202521304392.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-12003789041182943351643286353449115442.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-120382671005220273611437205992761291956.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-13319469161577409499988710594941227979.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-14628381181747621675269711313056703627.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-15376533674681263856399971174262151751.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-15447667952243969123740489432724187032.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-155749455075331084510143636473038266110.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-169268318209863021211044593541825424900.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-17095755899759766358978646663994883760.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-17586249612427938757776503512967278252.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-181700800465781138411877372167555695200.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-19719365057240550457394455271140764789.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-205355886498340160811676249527249689922.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-21451282738596159582679755608930649247.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-233152964671030679116027876742717561060.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-23834692418006822355215762028632351229.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-240463944860466409514177069630270598188.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-24097786506131827433786011019396593588.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-24356735704347648482474616691942878181.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-28856517931713340513250889073910582010.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-29604995549631451043129268208498593643.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-30324188764676599316836220637569432393.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-3123838246058510237534559100211196480.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-32116251772554323782328017952440711401.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-32468637945983812878469332508908549753.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-32594411871948292684052704083072045847.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-32699709934862731979445728181472487692.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-33576590938834550028060361814443364510.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-34078583351050760562488762113006374300.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-35177053913592849551528688477409807494.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-354747740773334833011400598600654168156.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-35491388813960271399187147623517843146.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-37085190043146646634596945182215277622.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-37240323523091967254551273912783888622.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-37773917024886326219422146791968866345.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-415289912485125975818174914676932764846.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-43467452564061286892108602854134583258.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-43730549099847551413235724386477385049.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-44884845692573551291202947429315147239.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-46921213029740144115112200630026152628.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-47557782952058715888686934801051721302.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-47869310155728566086718402130923527610.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-480677951212578886717775992967364036016.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-48076535405617389818819267665141276136.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-491555760172356576712821457475476577476.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-50863029611430167222650071150759726972.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-5111607826699835899138089793930867000.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-529342179131230755417971350196510028076.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-532276706093943857918064878967426697453.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-5597473495360908226532953839519868449.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-57029031102321103661987125079769520748.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-57036470107274773423314161419912974087.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-578003283114819263015383304654670382881.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-583613677083039602315296699795130634039.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-587812074958262744911741194658588068932.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-600659045848421876513651035495833958383.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-602611050595487721311721180738355215308.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-652485315167068875314996652281884124972.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-662226038989057535914270723351297659977.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-66373723415736610852468157426537095855.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-676613807463329473313418837867719990746.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-67669783406230435411224079756580372487.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-677403529650587526717014342006867159739.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-68115364666519816816262693437665059821.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-69019180884738721779883133089318338248.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-69683357792989478071179026866170091263.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-69988401079062183383872553338208331424.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-70124263010751737307851837518925071903.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-70620206177486124317617283947577874349.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-706573727496735022616645563774393535307.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-715968290151121739214397530682515772528.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-716042341349069585112382220211654659021.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-72231568749915266727896800271704851490.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-730366803248404150215430942610865277555.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-73808180848885150024119207670239694354.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-77499813127734434195133242359749950755.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-799246848934049243711425243790218370556.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-801079519831333690912981855589866174889.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-823115428636413111917862449617386859375.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-82666821306222677779006115398356005257.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-830791204901528555716567396115687994646.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-84089132808550502478286874727282748451.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-85032878044927769469116660913843716352.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-853643656850893852213273879987383312368.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-85873015530485947292860531801348028567.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-862557107468086845712462006207554210526.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-87358030719781316148386677376389390296.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-87425862132114092061232180238444010842.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-87880926213568398846023317976943647782.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-889243704655416872311946288564977734519.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-89421633118329945567674278663323886497.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-90508293545655968956939621435489366521.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name-91570501534421598228978222831317012152.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name119195472698607857716167438013919994848.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name12049541423279998699193938609392181804.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name12443964954561608016767678851589358812.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name125736430432765373013437951320435750926.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name128662957574822678917855693297355845563.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name141294696261988075914929252684340807898.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name14374498152809413351467629277176450102.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name156129577177332929311576913673640787400.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name180414371314042512512204374976342902894.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name19072618997635863341832680352261176348.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name19969661341625150797548747743235481544.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name200039066882352664017592375483074460028.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name20111527376553144024914970132039301184.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name21357359949836263954427208475262588973.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name21703615110870791789293354389847323654.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name238340025257497251716276670567535202948.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name241297714752915020517705057037724499429.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name2426611479215575997692317161544702724.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name25362767166574989971734130254570559029.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name25903973489566890594062501267167047092.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name284827640099177827816373689010819948687.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name315622296596228060110668445160485917886.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name31854665487479579056780786231575939246.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name32885676715695389072549377185409503863.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name33770174415283984010169488730502232435.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name338330382090926475414256630803497082688.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name33956899441028409005459240732375795381.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name37036093102173272168755187223441092217.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name386450671021817576913263223168007484763.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name39033721603406437381663197415938769241.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name40222796869307655757209672783746132422.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name426537904240960758811628075508203940980.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name430438616962942903813138000590519084931.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name441838527030571558413505921233334659100.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name444709147192319951611432614055639335657.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name45126502411811263781715011422775395972.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name47852914866356227849406362369511573647.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name48742363107081181266795044883052148677.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name494904003007027740711546718373264968569.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name49700658256441495033313071372782990380.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name498630130791776338016040840219457676091.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name50485268016903477625227126976934083026.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name51531675910521021652729579940777024719.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name52143740194685300537051941070640426378.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name52238511456587910072755469080698789287.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name5445110041744257445463322183905630484.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name56882722197501062729949569672968817439.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name579262787374051673414172715532245506619.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name59202470587382332049795102383997891602.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name596078916431301676615656895200115465541.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name597443302196548224615621017275017573683.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name60139174855469913493302488509953503681.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name6102937546655501088654717868922308115.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name614453485196534054711863596077475884845.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name617099285234981633711932879294346589169.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name63313960825574499977283118916528603982.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name63480548480983642827995889637965158389.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name640439250571770188116874205504503982964.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name65044262590871355666677477737278493780.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name680702700711202127411021761145141122286.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name693846621376605942318336928829834882842.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name697459420893633827613967661192703205628.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name700922070066236180615847872251714712399.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name709060501378049424215211648562317179479.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name71364754471839348954411815689890046653.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name714563762569953849614231977140285082174.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name71824697238327303487235510814432355829.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name72676789979423996771336967367980430442.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name730363454652857789816771661513399845934.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name75242526291709993114658772666249017417.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name766027188781924058215689817090759011818.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name77841787533369931791415875907253418747.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name785824278343144886611110543080630014621.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name786311225307270425910833884915581836858.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name801980210168710542110961085018042190391.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name80248334974422188293315523269528105610.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name832948065689471567911789138679481080622.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name834264798142373913817213975316398435921.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name84627594716049390163259089245277996861.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name84949305755612285111142012806935300998.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name852990160349419908616394125422801695498.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name860769300143785314710634423457361181283.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name864270165102071761311108125342761073038.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name90032772752023408779547412740515038037.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name90382410585684547815859350381739284220.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name920466812309187208812401407104113949105.tmp
+        //     D:\Projetos\PraxisNovo\praxis-microservices-qrcode\temp-file-name98295604485358418613180432319947756445.tmp
+        //   Please ensure that temporary files are deleted in the method under test.
+        //   See https://diff.blue/R020
+
+        // Arrange
+        // TODO: Populate arranged inputs
+        String content = "";
+
+        // Act
+        String actualGenerateResult = this.qrCodeImageGeneratorService.generate(content);
+
+        // Assert
+        // TODO: Add assertions on result
+    }
+
 }

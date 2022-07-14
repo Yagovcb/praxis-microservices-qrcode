@@ -1,12 +1,11 @@
+
 server:
-  host: localhost
   port: 8051
+  host: localhost
 
 spring:
   application:
     name: praxis-microservices-qrcode
-
-
 
 logging:
   level:
